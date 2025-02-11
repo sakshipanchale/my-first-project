@@ -1,0 +1,17 @@
+name: Simple CI Workflow
+
+on:
+  push:
+    branches:
+      - main  # Trigger this workflow whenever you push changes to the main branch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run tests
+        run: echo "Running tests"
